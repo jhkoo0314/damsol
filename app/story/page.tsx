@@ -35,9 +35,10 @@ export default function StoryPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <ImagePlaceholder
-                  aspectRatio="video"
+                  aspectRatio="wide"
                   className="w-full rounded-xl"
                   label="작가의 손 작업 이미지"
+                  showIcon
                 />
               </div>
               <div className="space-y-6">
@@ -130,9 +131,10 @@ export default function StoryPage() {
                 </div>
                 <div>
                   <ImagePlaceholder
-                    aspectRatio="video"
+                    aspectRatio="wide"
                     className="w-full rounded-xl"
                     label="다양한 천연석 이미지"
+                    showIcon
                   />
                 </div>
               </div>
@@ -180,9 +182,10 @@ export default function StoryPage() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <ImagePlaceholder
-                    aspectRatio="square"
+                    aspectRatio="wide"
                     className="w-full rounded-xl"
                     label="탯줄도장 보존 기술 이미지"
+                    showIcon
                   />
                 </div>
                 <div className="space-y-6">

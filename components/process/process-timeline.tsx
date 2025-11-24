@@ -76,9 +76,10 @@ export function ProcessTimeline() {
                 {/* 이미지 */}
                 <div>
                   <ImagePlaceholder
-                    aspectRatio="square"
+                    aspectRatio="wide"
                     className="w-full rounded-xl"
                     label={`${step.title} 이미지`}
+                    showIcon
                   />
                 </div>
               </div>

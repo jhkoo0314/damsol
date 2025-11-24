@@ -43,6 +43,9 @@ export default function Home() {
               천연석 위에 당신의 이름과 시간을 새기는 
               <strong className="font-semibold text-foreground"> 각품(刻品)</strong>을 만듭니다.
             </p>
+            <p className="text-xs sm:text-sm text-muted-foreground/80 italic max-w-md">
+              "자연이 만든 한 조각에 당신의 시간을 새깁니다."
+            </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Button asChild>
                 <Link href="/story">
@@ -70,14 +73,12 @@ export default function Home() {
           </div>
           {/* Right: Hero Image Placeholder */}
           <div className="relative group">
-            <div className="h-80 sm:h-96 w-full rounded-2xl border border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center text-sm text-muted-foreground transition-all group-hover:border-gray-400">
-              <ImageIcon className="h-10 w-10 mb-4 opacity-20" />
-              <span className="text-center px-6">
-                [이미지 영역]<br/>
-                작가의 손이 돌에 닿는 순간 클로즈업<br/>
-                (따뜻하고 묵직한 톤)
-              </span>
-            </div>
+            <ImagePlaceholder
+              aspectRatio="hero"
+              className="w-full rounded-xl"
+              label="작가의 손이 돌에 닿는 순간 클로즈업"
+              showIcon
+            />
           </div>
         </section>
 
@@ -111,10 +112,12 @@ export default function Home() {
               </div>
             </div>
             {/* Story side image placeholder */}
-            <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 h-64 md:h-80 flex flex-col items-center justify-center text-xs text-muted-foreground">
-              <Hammer className="h-8 w-8 mb-3 opacity-20" />
-              [이미지 영역] 작업실/공방 전경
-            </div>
+            <ImagePlaceholder
+              aspectRatio="wide"
+              className="w-full rounded-xl"
+              label="작업실/공방 전경"
+              showIcon
+            />
           </div>
         </section>
 
@@ -194,8 +197,13 @@ export default function Home() {
                 <CardTitle className="text-base font-serif">돌을 선택합니다</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 text-muted-foreground text-xs leading-relaxed">
-                <div className="mb-3 h-24 rounded-md bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center">
-                  <Search className="h-5 w-5 opacity-20" />
+                <div className="mb-3">
+                  <ImagePlaceholder
+                    aspectRatio="wide"
+                    className="w-full rounded-md"
+                    label="돌 선택 과정"
+                    showIcon
+                  />
                 </div>
                 여러 개의 천연석 중 이름과 어울리는 단 한 점을 고릅니다.
               </CardContent>
@@ -208,8 +216,13 @@ export default function Home() {
                 <CardTitle className="text-base font-serif">결을 읽습니다</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 text-muted-foreground text-xs leading-relaxed">
-                <div className="mb-3 h-24 rounded-md bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center">
-                  <Eye className="h-5 w-5 opacity-20" />
+                <div className="mb-3">
+                  <ImagePlaceholder
+                    aspectRatio="wide"
+                    className="w-full rounded-md"
+                    label="결 읽기 과정"
+                    showIcon
+                  />
                 </div>
                 빛에 비춰 결의 방향과 흐름을 확인합니다.
               </CardContent>
@@ -222,8 +235,13 @@ export default function Home() {
                 <CardTitle className="text-base font-serif">디자인합니다</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 text-muted-foreground text-xs leading-relaxed">
-                <div className="mb-3 h-24 rounded-md bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center">
-                  <Edit3 className="h-5 w-5 opacity-20" />
+                <div className="mb-3">
+                  <ImagePlaceholder
+                    aspectRatio="wide"
+                    className="w-full rounded-md"
+                    label="서체 디자인 과정"
+                    showIcon
+                  />
                 </div>
                 획의 의미와 균형을 고려해 서체를 구성합니다.
               </CardContent>
@@ -236,8 +254,13 @@ export default function Home() {
                 <CardTitle className="text-base font-serif">칼로 새깁니다</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 text-muted-foreground text-xs leading-relaxed">
-                <div className="mb-3 h-24 rounded-md bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center">
-                  <PenTool className="h-5 w-5 opacity-20" />
+                <div className="mb-3">
+                  <ImagePlaceholder
+                    aspectRatio="wide"
+                    className="w-full rounded-md"
+                    label="칼로 새기는 과정"
+                    showIcon
+                  />
                 </div>
                 한 획씩, 손의 감각으로 깊이를 조절해 새깁니다.
               </CardContent>
@@ -250,8 +273,13 @@ export default function Home() {
                 <CardTitle className="text-base font-serif">완성합니다</CardTitle>
               </CardHeader>
               <CardContent className="flex-1 text-muted-foreground text-xs leading-relaxed">
-                <div className="mb-3 h-24 rounded-md bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center">
-                  <PackageCheck className="h-5 w-5 opacity-20" />
+                <div className="mb-3">
+                  <ImagePlaceholder
+                    aspectRatio="wide"
+                    className="w-full rounded-md"
+                    label="연마 및 완성 과정"
+                    showIcon
+                  />
                 </div>
                 연마·검수 및 진공 작업을 거쳐 완성합니다.
               </CardContent>
@@ -275,27 +303,48 @@ export default function Home() {
           </p>
           <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
             {/* Gallery Items */}
-            <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-center">천연석 Type A<br/>(수산석)</span>
-            </div>
-            <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-center">천연석 Type B<br/>(요녕석)</span>
-            </div>
-            <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-center">천연석 Type C<br/>(창화석)</span>
-            </div>
-            <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-center">천연석 Type D<br/>(프리미엄)</span>
-            </div>
-            <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-center">작품 예시 01</span>
-            </div>
-            <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-center">작품 예시 02</span>
-            </div>
-            <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-center">작품 예시 03</span>
-            </div>
+            <ImagePlaceholder
+              aspectRatio="square"
+              className="w-full rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+              label="천연석 Type A (수산석)"
+              showIcon
+            />
+            <ImagePlaceholder
+              aspectRatio="square"
+              className="w-full rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+              label="천연석 Type B (요녕석)"
+              showIcon
+            />
+            <ImagePlaceholder
+              aspectRatio="square"
+              className="w-full rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+              label="천연석 Type C (창화석)"
+              showIcon
+            />
+            <ImagePlaceholder
+              aspectRatio="square"
+              className="w-full rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+              label="천연석 Type D (프리미엄)"
+              showIcon
+            />
+            <ImagePlaceholder
+              aspectRatio="square"
+              className="w-full rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+              label="작품 예시 01"
+              showIcon
+            />
+            <ImagePlaceholder
+              aspectRatio="square"
+              className="w-full rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+              label="작품 예시 02"
+              showIcon
+            />
+            <ImagePlaceholder
+              aspectRatio="square"
+              className="w-full rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+              label="작품 예시 03"
+              showIcon
+            />
             <div className="aspect-square rounded-xl border border-dashed border-gray-300 bg-gray-50 flex items-center justify-center text-[11px] text-muted-foreground hover:bg-gray-100 transition-colors cursor-pointer">
               <span className="text-center flex flex-col items-center gap-2">
                 <span>더 보기</span>
@@ -326,8 +375,13 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-3">
             {/* Product 1 */}
             <Card className="overflow-hidden group">
-              <div className="h-48 border-b bg-gray-50 flex items-center justify-center text-xs text-muted-foreground group-hover:bg-gray-100 transition-colors">
-                [이미지] 탯줄/보존 도장
+              <div className="border-b">
+                <ImagePlaceholder
+                  aspectRatio="portrait"
+                  className="w-full"
+                  label="탯줄/보존 도장"
+                  showIcon
+                />
               </div>
               <CardHeader className="pb-2">
                 <Badge className="w-fit mb-2 bg-black text-white border-transparent">BEST</Badge>
@@ -343,8 +397,13 @@ export default function Home() {
 
             {/* Product 2 */}
             <Card className="overflow-hidden group">
-              <div className="h-48 border-b bg-gray-50 flex items-center justify-center text-xs text-muted-foreground group-hover:bg-gray-100 transition-colors">
-                [이미지] 이름/개인 도장
+              <div className="border-b">
+                <ImagePlaceholder
+                  aspectRatio="portrait"
+                  className="w-full"
+                  label="이름/개인 도장"
+                  showIcon
+                />
               </div>
               <CardHeader className="pb-2">
                 <CardTitle className="font-serif text-lg">The Signature (이름)</CardTitle>
@@ -359,8 +418,13 @@ export default function Home() {
 
             {/* Product 3 */}
             <Card className="overflow-hidden group">
-              <div className="h-48 border-b bg-gray-50 flex items-center justify-center text-xs text-muted-foreground group-hover:bg-gray-100 transition-colors">
-                [이미지] 커플/선물 도장
+              <div className="border-b">
+                <ImagePlaceholder
+                  aspectRatio="portrait"
+                  className="w-full"
+                  label="커플/선물 도장"
+                  showIcon
+                />
               </div>
               <CardHeader className="pb-2">
                 <CardTitle className="font-serif text-lg">The Promise (커플)</CardTitle>
