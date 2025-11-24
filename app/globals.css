@@ -49,3 +49,53 @@ body {
 .font-serif {
   font-family: var(--font-serif), "Times New Roman", serif;
 }
+
+/* 반응형 유틸리티 클래스 */
+@media (max-width: 767px) {
+  /* 모바일 최적화 */
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-text-xs {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 태블릿 최적화 */
+  .tablet-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* 데스크톱 최적화 */
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+/* 반응형 이미지 최적화 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 터치 디바이스 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  /* 터치 디바이스에서 호버 효과 제거 */
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  /* 터치 타겟 크기 최소 44px */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

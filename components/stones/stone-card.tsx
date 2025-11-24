@@ -2,6 +2,7 @@
 
 import { Stone } from "@/lib/types";
 import { Card } from "@/components/ui/card";
+import { ResponsiveImage } from "@/components/ui/responsive-image";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { cn } from "@/lib/utils";
 
@@ -24,10 +25,22 @@ export function StoneCard({ stone, onClick, className }: StoneCardProps) {
       onClick={onClick}
     >
       <div className="relative aspect-square overflow-hidden">
-        <ImagePlaceholder
-          aspectRatio="square"
-          className="h-full w-full transition-transform group-hover:scale-105"
-        />
+        {stone.imageUrl ? (
+          <ResponsiveImage
+            src={stone.imageUrl}
+            alt={`${stone.name} - ${stone.color}`}
+            aspectRatio="square"
+            className="h-full w-full transition-transform group-hover:scale-105"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            fallbackLabel={`${stone.name} 클로즈업`}
+          />
+        ) : (
+          <ImagePlaceholder
+            aspectRatio="square"
+            className="h-full w-full transition-transform group-hover:scale-105"
+            label={`${stone.name} 클로즈업`}
+          />
+        )}
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity group-hover:opacity-100">
           <div className="flex h-full flex-col items-center justify-center p-4 text-center text-white">

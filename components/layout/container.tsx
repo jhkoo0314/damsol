@@ -25,6 +25,10 @@ export function Container({
         sizeClasses[size],
         className
       )}
+      style={{
+        // 모바일에서 최소 너비 보장
+        minWidth: "320px",
+      }}
     >
       {children}
     </div>
