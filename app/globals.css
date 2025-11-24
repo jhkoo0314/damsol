@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* 브랜드 색상 팔레트 - 단단함, 자연, 절제된 톤 */
+  /* 자연스러운 돌의 색감을 반영한 중성 톤 */
+  --color-background: oklch(99% 0.005 60);
+  --color-foreground: oklch(15% 0.01 60);
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(15% 0.01 60);
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(15% 0.01 60);
+  
+  /* Primary - 단단함과 절제를 표현한 진한 회색 */
+  --color-primary: oklch(25% 0.01 60);
+  --color-primary-foreground: oklch(98% 0 0);
+  
+  /* Secondary - 자연스러운 돌의 은은한 톤 */
+  --color-secondary: oklch(95% 0.005 60);
+  --color-secondary-foreground: oklch(25% 0.01 60);
+  
+  /* Muted - placeholder용, 절제된 여백 느낌 */
+  --color-muted: oklch(96% 0.003 60);
+  --color-muted-foreground: oklch(45% 0.01 60);
+  
+  /* Accent - 자연의 따뜻함을 담은 포인트 색상 */
+  --color-accent: oklch(92% 0.01 60);
+  --color-accent-foreground: oklch(25% 0.01 60);
+  
+  --color-destructive: oklch(60.2% 0.177 29.234);
+  --color-destructive-foreground: oklch(98% 0 0);
+  
+  /* Border - 돌의 결을 연상시키는 부드러운 경계 */
+  --color-border: oklch(88% 0.005 60);
+  --color-input: oklch(88% 0.005 60);
+  --color-ring: oklch(25% 0.01 60);
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--color-border);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
 }
