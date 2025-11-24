@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
@@ -12,14 +11,8 @@ import {
   Gem, 
   PenTool, 
   Hourglass, 
-  Search, 
-  Eye, 
-  Edit3, 
-  PackageCheck,
   ArrowRight,
-  ExternalLink,
-  Image as ImageIcon,
-  Hammer
+  ExternalLink
 } from "lucide-react";
 
 export default function Home() {
@@ -44,7 +37,7 @@ export default function Home() {
               <strong className="font-semibold text-foreground"> 각품(刻品)</strong>을 만듭니다.
             </p>
             <p className="text-xs sm:text-sm text-muted-foreground/80 italic max-w-md">
-              "자연이 만든 한 조각에 당신의 시간을 새깁니다."
+              &ldquo;자연이 만든 한 조각에 당신의 시간을 새깁니다.&rdquo;
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <Button asChild>
