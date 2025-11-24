@@ -7,9 +7,21 @@ import { XIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 function Dialog({
+  onOpenChange,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Root>) {
-  return <DialogPrimitive.Root data-slot="dialog" {...props} />
+  const handleOpenChange = (open: boolean) => {
+    if (onOpenChange) {
+      onOpenChange(open);
+    }
+    console.log(`[Dialog] ${open ? "열림" : "닫힘"}`);
+  };
+
+  return <DialogPrimitive.Root 
+    data-slot="dialog" 
+    {...props}
+    onOpenChange={handleOpenChange}
+  />
 }
 
 function DialogTrigger({
