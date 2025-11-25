@@ -88,29 +88,6 @@ export default function KakPoomPage() {
             </div>
           </section>
 
-          {/* 각품이 필요한 이유 */}
-          <section className="py-16 md:py-24 bg-muted/30">
-            <Container>
-              <div className="max-w-3xl mx-auto space-y-6">
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold text-center">
-                  각품이 필요한 이유
-                </h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
-                  <p>
-                    기존 도장 시장 언어(도장/인장/오브제)는 모두 경쟁과 중복입니다.
-                    &quot;오브제&quot;는 스톤피커와의 언어적 충돌이 발생합니다.
-                  </p>
-                  <p className="font-medium text-lg">
-                    담솔의 본질은 도장을 만드는 것이 아니라, 의미를 새기는 행위 자체입니다.
-                  </p>
-                  <p>
-                    각품은 담솔이 만든 새로운 카테고리로, 브랜드 세계관을 독점할 수 있습니다.
-                  </p>
-                </div>
-              </div>
-            </Container>
-          </section>
-
           {/* 각품의 가치 제안 */}
           <section className="py-24 md:py-32">
             <Container>
