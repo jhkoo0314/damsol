@@ -85,7 +85,7 @@ export default function Home() {
               BRAND STORY
             </span>
           </div>
-          <div className="space-y-8">
+          <div className="grid gap-12 md:grid-cols-[1.2fr,1fr] items-start">
             <div className="space-y-6 text-base leading-loose text-gray-600 font-serif">
               <p>
                 <span className="text-foreground font-semibold">대량생산이 아닌 단 하나의 작품으로,</span><br/>
@@ -104,16 +104,14 @@ export default function Home() {
                 <div className="h-10 mt-2 opacity-50" /> {/* 낙관 이미지 자리 */}
               </div>
             </div>
-            {/* 작업실/공방 전경 이미지 - 우측 정렬, 작은 사이즈 */}
-            <div className="flex justify-end">
-              <div className="w-full md:w-2/3 lg:w-1/2">
-                <ImagePlaceholder
-                  aspectRatio="wide"
-                  className="w-full rounded-xl"
-                  label="작업실/공방 전경"
-                  showIcon
-                />
-              </div>
+            {/* 작업실/공방 전경 이미지 - 작은 사이즈 */}
+            <div className="w-full">
+              <ImagePlaceholder
+                aspectRatio="wide"
+                className="w-full rounded-xl"
+                label="작업실/공방 전경"
+                showIcon
+              />
             </div>
           </div>
         </section>
