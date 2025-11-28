@@ -7,7 +7,7 @@ export const stonesData: Stone[] = [
     number: "001",
     color: "회백색",
     texture: "부드러운 결, 은은한 무늬",
-    status: "avialable",
+    status: "available",
     imageUrl: "/stone-images/stone-001.png",
   },
   {
