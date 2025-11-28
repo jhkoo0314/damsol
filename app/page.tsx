@@ -17,7 +17,7 @@ export default function Home() {
           <div className="max-w-4xl w-full text-center space-y-10 z-10 fade-in-up">
             <div className="space-y-4">
               <span className="inline-block px-3 py-1 border border-gray-400 rounded-full text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase bg-white/50 backdrop-blur-sm">
-                Time Archiving Object
+                Time Archiving craft
               </span>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium leading-[1.15] tracking-tight text-gray-900 font-serif">
                 변하지 않는 돌 위에,
