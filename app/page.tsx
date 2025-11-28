@@ -186,7 +186,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <CollectionGrid />
+            <CollectionGrid limit={3} />
           </div>
         </section>
       </main>
