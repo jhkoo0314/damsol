@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
 import { StoneGrid } from "@/components/stones/stone-grid";
+import { StoreLinkButton } from "@/components/stones/store-link-button";
 
 export const metadata: Metadata = {
   title: "돌 선택 | 담솔 DAMSOL",
@@ -47,12 +47,14 @@ export default function StonesPage() {
                 <p className="text-muted-foreground">
                   구매는 네이버 스마트스토어에서 진행됩니다.
                 </p>
+                <div className="pt-4">
+                  <StoreLinkButton />
+                </div>
               </div>
             </Container>
           </section>
         </Container>
       </main>
-      <Footer />
     </>
   );
 }

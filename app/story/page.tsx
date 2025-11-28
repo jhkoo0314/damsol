@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Sun } from "lucide-react";
@@ -276,7 +275,6 @@ export default function StoryPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

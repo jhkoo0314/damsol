@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <main>
         {/* ===== Hero Section ===== */}
-        <section className="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
+        <section className="min-h-screen flex items-center justify-center pt-8 px-4 relative overflow-hidden">
           <div className="max-w-4xl w-full text-center space-y-10 z-10 fade-in-up">
             <div className="space-y-4">
               <span className="inline-block px-3 py-1 border border-gray-400 rounded-full text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase bg-white/50 backdrop-blur-sm">

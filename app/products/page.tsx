@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
 import { ProductCategoryCard } from "@/components/products/product-category-card";
 
@@ -95,7 +94,6 @@ export default function ProductsPage() {
           </section>
         </Container>
       </main>
-      <Footer />
     </>
   );
 }
