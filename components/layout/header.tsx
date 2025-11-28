@@ -11,9 +11,7 @@ const navigationItems = [
   { name: "브랜드 스토리", href: "/story" },
   { name: "각품 소개", href: "/kak-poom" },
   { name: "돌 선택", href: "/stones" },
-  { name: "제작 과정", href: "/process" },
-  { name: "상품", href: "/products" },
-  { name: "고객 후기", href: "/reviews" },
+  { name: "컬렉션", href: "/collection" },
 ];
 
 export function Header() {
@@ -24,16 +22,22 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="flex items-baseline gap-2 cursor-pointer"
             onClick={() => {
               console.log("[Header] 로고 클릭: 홈으로 이동");
             }}
           >
-            <span className="text-lg font-serif font-bold tracking-tight">담솔</span>
-            <span className="text-xl font-serif font-bold tracking-tight">DAMSOL</span>
-            <span className="text-xs tracking-[0.2em] text-muted-foreground font-serif">刻</span>
+            <span className="text-lg font-serif font-bold tracking-tight">
+              담솔
+            </span>
+            <span className="text-xl font-serif font-bold tracking-tight">
+              DAMSOL
+            </span>
+            <span className="text-xs tracking-[0.2em] text-muted-foreground font-serif">
+              刻
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,7 +48,9 @@ export function Header() {
                 href={item.href}
                 className="hover:text-foreground transition-colors"
                 onClick={() => {
-                  console.log(`[Header] 네비게이션 클릭: ${item.name} (${item.href})`);
+                  console.log(
+                    `[Header] 네비게이션 클릭: ${item.name} (${item.href})`
+                  );
                 }}
               >
                 {item.name}
@@ -75,14 +81,17 @@ export function Header() {
           </div>
 
           {/* Mobile Menu */}
-          <Sheet open={mobileMenuOpen} onOpenChange={(open) => {
-            setMobileMenuOpen(open);
-            if (open) {
-              console.log("[Header] 모바일 메뉴 열림");
-            } else {
-              console.log("[Header] 모바일 메뉴 닫힘");
-            }
-          }}>
+          <Sheet
+            open={mobileMenuOpen}
+            onOpenChange={(open) => {
+              setMobileMenuOpen(open);
+              if (open) {
+                console.log("[Header] 모바일 메뉴 열림");
+              } else {
+                console.log("[Header] 모바일 메뉴 닫힘");
+              }
+            }}
+          >
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
@@ -96,7 +105,9 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => {
-                      console.log(`[Header] 모바일 메뉴 클릭: ${item.name} (${item.href})`);
+                      console.log(
+                        `[Header] 모바일 메뉴 클릭: ${item.name} (${item.href})`
+                      );
                       setMobileMenuOpen(false);
                     }}
                     className="px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
@@ -105,11 +116,7 @@ export function Header() {
                   </Link>
                 ))}
                 <div className="pt-4 border-t">
-                  <Button
-                    asChild
-                    variant="default"
-                    className="w-full"
-                  >
+                  <Button asChild variant="default" className="w-full">
                     <a
                       href="https://smartstore.naver.com/damsolseal"
                       target="_blank"
@@ -131,4 +138,3 @@ export function Header() {
     </header>
   );
 }
-

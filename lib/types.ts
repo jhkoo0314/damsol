@@ -20,3 +20,17 @@ export interface Product {
   imageUrl?: string;
   naverStoreUrl?: string;
 }
+
+export interface Collection {
+  id: string;
+  name: string;
+  description: string;
+  imageUrl?: string;
+  badge?: string;
+  naverStoreUrl?: string;
+  details?: {
+    title?: string;
+    content?: string;
+    features?: string[];
+  };
+}

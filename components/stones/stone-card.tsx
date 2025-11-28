@@ -4,6 +4,8 @@ import { Stone } from "@/lib/types";
 import { Card } from "@/components/ui/card";
 import { ResponsiveImage } from "@/components/ui/responsive-image";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import Image from "next/image";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface StoneCardProps {
@@ -14,6 +16,7 @@ interface StoneCardProps {
 
 export function StoneCard({ stone, onClick, className }: StoneCardProps) {
   const isSoldOut = stone.status === "sold_out";
+  const [imageError, setImageError] = useState(false);
 
   return (
     <Card
@@ -25,14 +28,20 @@ export function StoneCard({ stone, onClick, className }: StoneCardProps) {
       onClick={onClick}
     >
       <div className="relative aspect-square overflow-hidden">
-        {stone.imageUrl ? (
-          <ResponsiveImage
+        {stone.imageUrl && !imageError ? (
+          <Image
             src={stone.imageUrl}
             alt={`${stone.name} - ${stone.color}`}
-            aspectRatio="square"
-            className="h-full w-full transition-transform group-hover:scale-105"
+            fill
+            className="object-cover transition-transform group-hover:scale-105"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            fallbackLabel={`${stone.name} 클로즈업`}
+            onError={() => {
+              console.log(`[StoneCard] 이미지 로드 실패: ${stone.imageUrl}`);
+              setImageError(true);
+            }}
+            onLoad={() => {
+              console.log(`[StoneCard] 이미지 로드 성공: ${stone.imageUrl}`);
+            }}
           />
         ) : (
           <ImagePlaceholder
