@@ -30,21 +30,21 @@ export function StoneDetailModal({
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
-  if (!stone) return null;
-
   // 이미지 배열 준비 (imageUrls가 있으면 사용, 없으면 imageUrl을 배열로)
-  const images = stone.imageUrls && stone.imageUrls.length > 0 
+  const images = stone?.imageUrls && stone.imageUrls.length > 0 
     ? stone.imageUrls 
-    : stone.imageUrl 
+    : stone?.imageUrl 
       ? [stone.imageUrl] 
       : [];
 
   // 모달이 열릴 때마다 첫 번째 이미지로 리셋
   useEffect(() => {
-    if (open) {
+    if (open && stone) {
       setCurrentImageIndex(0);
     }
   }, [open, stone?.id]);
+
+  if (!stone) return null;
 
   // 다음 이미지
   const nextImage = () => {
