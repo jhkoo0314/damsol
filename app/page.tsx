@@ -64,9 +64,9 @@ export default function Home() {
               Philosophy
             </span>
             <h2 className="text-2xl sm:text-4xl font-medium leading-relaxed text-gray-900 font-serif">
-              &quot;우리는 도장을 만들지 않습니다.
+              &quot;돌의 결을 읽고 마음을 새깁니다.
               <br />
-              시간을 담는{" "}
+              담솔은 시간을 담는{" "}
               <span className="text-[#B91C1C] inline-block border-b border-[#B91C1C]/30 pb-1">
                 각품(刻品)
               </span>
@@ -75,9 +75,9 @@ export default function Home() {
             <p className="text-gray-500 font-light leading-loose text-sm sm:text-base">
               대량생산이 아닌 단 하나의 작품으로,
               <br />
-              실용품이 아닌 시간을 담는 오브제로.
+              똑같은 모양으로 찍어내는 것이 아닌,
               <br />
-              당신의 이야기를 돌 위에 새깁니다.
+              작가의 손끝으로 세상 단 하나의 이름을 완성합니다.
             </p>
             <div className="pt-4">
               <Link
