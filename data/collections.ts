@@ -155,4 +155,21 @@ export const collectionsData: Collection[] = [
       ],
     },
   },
+  {
+    id: "custom-family",
+    name: "Custom Family 刻",
+    description: "완전 맞춤 제작. 당신만의 특별한 각품",
+    imageUrl: "",
+    details: {
+      title: "Custom 刻",
+      content:
+        "완전 맞춤 제작으로 당신만의 특별한 각품을 만듭니다. 원하는 원석, 디자인, 각인 스타일을 모두 커스터마이징할 수 있습니다.",
+      features: [
+        "완전 맞춤 제작",
+        "원석 직접 선택 가능",
+        "디자인 커스터마이징",
+        "1:1 상담 서비스",
+      ],
+    },
+  },
 ];
