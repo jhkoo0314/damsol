@@ -17,7 +17,7 @@ export const stonesData: Stone[] = [
     color: "연한 회색",
     texture: "세밀한 결, 깔끔한 표면",
     status: "available",
-    imageUrl: "/stone-images/stone-002.jpg",
+    imageUrl: "/stone-images/mg0102.png",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const stonesData: Stone[] = [
     color: "청회색",
     texture: "자연스러운 무늬, 독특한 패턴",
     status: "available",
-    imageUrl: "/stone-images/stone-003.jpg",
+    imageUrl: "/stone-images/mg0133.png",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const stonesData: Stone[] = [
     color: "적갈색",
     texture: "따뜻한 톤, 부드러운 질감",
     status: "available",
-    imageUrl: "/stone-images/stone-004.jpg",
+    imageUrl: "/stone-images/mg0147.png",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ export const stonesData: Stone[] = [
     color: "황갈색",
     texture: "은은한 광택, 고급스러운 느낌",
     status: "available",
-    imageUrl: "/stone-images/stone-005.jpg",
+    imageUrl: "/stone-images/mg0150.png",
   },
   {
     id: 6,

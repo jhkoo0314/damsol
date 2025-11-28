@@ -6,8 +6,7 @@ export const collectionsData: Collection[] = [
     name: "The Origin",
     description: "시작을 봉인하는 보존 각품 (탯줄/유치)",
     badge: "Signature",
-    imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
+    imageUrl: "/collections/mg0102.png",
     details: {
       title: "The Origin",
       content:
@@ -24,8 +23,7 @@ export const collectionsData: Collection[] = [
     id: "signature",
     name: "The Signature",
     description: "품격을 높이는 개인 인장",
-    imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
+    imageUrl: "/collections/mg0133.png",
     details: {
       title: "The Signature",
       content:
@@ -43,7 +41,6 @@ export const collectionsData: Collection[] = [
     name: "The Promise",
     description: "변치 않는 약속의 증표",
     imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
     details: {
       title: "The Promise",
       content:
@@ -60,8 +57,7 @@ export const collectionsData: Collection[] = [
     id: "classic",
     name: "Classic 刻",
     description: "이름도장 기본 라인. 천연석 + 1:1 수제 각인",
-    imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
+    imageUrl: "/collections/mg0147.png",
     details: {
       title: "Classic 刻",
       content:
@@ -79,7 +75,6 @@ export const collectionsData: Collection[] = [
     name: "Premium 刻",
     description: "더 희귀한 원석 사용. 1:1 맞춤 서체·디자인 설계",
     imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
     details: {
       title: "Premium 刻",
       content:
@@ -97,7 +92,6 @@ export const collectionsData: Collection[] = [
     name: "Masterpiece 刻",
     description: "최고급 원석과 예술적 각인. 작가의 작품",
     imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
     details: {
       title: "Masterpiece 刻",
       content:
@@ -115,7 +109,6 @@ export const collectionsData: Collection[] = [
     name: "Family 刻",
     description: "가족의 인연을 새기는 가족 세트",
     imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
     details: {
       title: "Family 刻",
       content:
@@ -133,7 +126,6 @@ export const collectionsData: Collection[] = [
     name: "Couple 刻",
     description: "커플의 약속을 새기는 커플 세트",
     imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
     details: {
       title: "Couple 刻",
       content:
@@ -151,7 +143,6 @@ export const collectionsData: Collection[] = [
     name: "Custom 刻",
     description: "완전 맞춤 제작. 당신만의 특별한 각품",
     imageUrl: "",
-    naverStoreUrl: "https://smartstore.naver.com/damsolseal",
     details: {
       title: "Custom 刻",
       content:
