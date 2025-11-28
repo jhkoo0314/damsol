@@ -64,13 +64,13 @@ export default function Home() {
               Philosophy
             </span>
             <h2 className="text-2xl sm:text-4xl font-medium leading-relaxed text-gray-900 font-serif">
-              "우리는 도장을 만들지 않습니다.
+              &quot;우리는 도장을 만들지 않습니다.
               <br />
               시간을 담는{" "}
               <span className="text-[#B91C1C] inline-block border-b border-[#B91C1C]/30 pb-1">
                 각품(刻品)
               </span>
-              을 만듭니다."
+              을 만듭니다.&quot;
             </h2>
             <p className="text-gray-500 font-light leading-loose text-sm sm:text-base">
               대량생산이 아닌 단 하나의 작품으로,

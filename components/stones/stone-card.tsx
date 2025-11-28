@@ -2,7 +2,6 @@
 
 import { Stone } from "@/lib/types";
 import { Card } from "@/components/ui/card";
-import { ResponsiveImage } from "@/components/ui/responsive-image";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import Image from "next/image";
 import { useState } from "react";
