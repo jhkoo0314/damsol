@@ -22,10 +22,10 @@ export default function StoryPage() {
             Brand Philosophy
           </span>
           <h1 className="text-3xl md:text-5xl font-medium leading-tight mb-8 text-gray-900 font-serif">
-            우리는 도장을 만들지 않습니다.
+            이름의 무게를 조각합니다.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light font-serif">
-            기계가 0.1초 만에 찍어내는 실용품이 아니라,
+            평생 불리게 될 소중한 이름이기에에,
             <br />
             당신의 시간을 담아내는{" "}
             <strong className="text-[#B91C1C] font-medium">각품(刻品)</strong>을
