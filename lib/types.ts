@@ -8,6 +8,7 @@ export interface Stone {
   texture: string;
   status: StoneStatus;
   imageUrl: string;
+  imageUrls?: string[]; // 여러 이미지 슬라이더용
 }
 
 export type ProductCategory = "classic" | "premium" | "masterpiece";
