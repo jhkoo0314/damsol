@@ -46,7 +46,7 @@ function Button({
   size,
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
+}: React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
   }) {
@@ -57,7 +57,7 @@ function Button({
       <Slot
         data-slot="button"
         className={cn(buttonVariants({ variant, size, className }))}
-        {...props}
+        {...(props as any)}
       />
     )
   }
@@ -69,7 +69,7 @@ function Button({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      {...props}
+      {...(props as any)}
     />
   )
 }
