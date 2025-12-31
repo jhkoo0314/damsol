@@ -194,7 +194,7 @@
 
 ### **Frontend**
 
-* Next.js 15.5.6 (App Router)
+* Next.js 15.5.9 (App Router)
 * React Compiler
 * Tailwind CSS v4
 * shadcn/ui
