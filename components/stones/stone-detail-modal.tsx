@@ -43,7 +43,7 @@ export function StoneDetailModal({
     if (open && stone) {
       setCurrentImageIndex(0);
     }
-  }, [open, stone?.id]);
+  }, [open, stone]);
 
   if (!stone) return null;
 
