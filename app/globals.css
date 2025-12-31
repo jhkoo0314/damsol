@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  /* 브랜드 색상 팔레트 - 단단함, 자연, 절제된 톤 */
+  /* 자연스러운 돌의 색감을 반영한 중성 톤 */
+  --color-background: oklch(99% 0.005 60);
+  --color-foreground: oklch(15% 0.01 60);
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(15% 0.01 60);
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(15% 0.01 60);
+  
+  /* Primary - 단단함과 절제를 표현한 진한 회색 */
+  --color-primary: oklch(25% 0.01 60);
+  --color-primary-foreground: oklch(98% 0 0);
+  
+  /* Secondary - 자연스러운 돌의 은은한 톤 */
+  --color-secondary: oklch(95% 0.005 60);
+  --color-secondary-foreground: oklch(25% 0.01 60);
+  
+  /* Muted - placeholder용, 절제된 여백 느낌 */
+  --color-muted: oklch(96% 0.003 60);
+  --color-muted-foreground: oklch(45% 0.01 60);
+  
+  /* Accent - 자연의 따뜻함을 담은 포인트 색상 */
+  --color-accent: oklch(92% 0.01 60);
+  --color-accent-foreground: oklch(25% 0.01 60);
+  
+  --color-destructive: oklch(60.2% 0.177 29.234);
+  --color-destructive-foreground: oklch(98% 0 0);
+  
+  /* Border - 돌의 결을 연상시키는 부드러운 경계 */
+  --color-border: oklch(88% 0.005 60);
+  --color-input: oklch(88% 0.005 60);
+  --color-ring: oklch(25% 0.01 60);
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+}
+
+/* 반응형 유틸리티 클래스 */
+@media (max-width: 767px) {
+  /* 모바일 최적화 */
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-text-xs {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 태블릿 최적화 */
+  .tablet-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* 데스크톱 최적화 */
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+/* 반응형 이미지 최적화 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 터치 디바이스 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  /* 터치 디바이스에서 호버 효과 제거 */
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  /* 터치 타겟 크기 최소 44px */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Fade-in-up 애니메이션 */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* 이미지 플레이스홀더 박스 스타일 */
+.img-box {
+  @apply bg-gray-200 text-gray-400 flex flex-col items-center justify-center text-center text-xs tracking-widest uppercase p-4;
+}
