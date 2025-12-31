@@ -13,6 +13,7 @@ import { ResponsiveImage } from "@/components/ui/responsive-image";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface StoneDetailModalProps {
   stone: Stone | null;
@@ -95,14 +96,19 @@ export function StoneDetailModal({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl">
-        <DialogHeader>
-          <DialogTitle className="font-serif text-2xl">{stone.name}</DialogTitle>
-          <DialogDescription>
-            No. {stone.number} · {stone.color}
-          </DialogDescription>
-        </DialogHeader>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
+          <DialogHeader>
+            <DialogTitle className="font-serif text-2xl">{stone.name}</DialogTitle>
+            <DialogDescription>
+              No. {stone.number} · {stone.color}
+            </DialogDescription>
+          </DialogHeader>
 
-        <div className="space-y-6">
+          <div className="space-y-6">
           {/* 돌 이미지 슬라이더 */}
           <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-gray-50">
             <div
@@ -204,6 +210,7 @@ export function StoneDetailModal({
             </div>
           </div>
         </div>
+        </motion.div>
       </DialogContent>
     </Dialog>
   );

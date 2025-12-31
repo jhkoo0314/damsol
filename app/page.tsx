@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { CollectionGrid } from "@/components/collections/collection-grid";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -14,34 +15,64 @@ export default function Home() {
       <main>
         {/* ===== Hero Section ===== */}
         <section className="min-h-screen flex items-center justify-center pt-8 px-4 relative overflow-hidden">
-          <div className="max-w-4xl w-full text-center space-y-10 z-10 fade-in-up">
+          <div className="max-w-4xl w-full text-center space-y-10 z-10">
             <div className="space-y-4">
-              <span className="inline-block px-3 py-1 border border-gray-400 rounded-full text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase bg-white/50 backdrop-blur-sm">
+              {/* Badge - 첫 번째 등장 */}
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="inline-block px-3 py-1 border border-gray-400 rounded-full text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase bg-white/50 backdrop-blur-sm"
+              >
                 Time Archiving craft
-              </span>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium leading-[1.15] tracking-tight text-gray-900 font-serif">
+              </motion.span>
+
+              {/* Title - 두 번째 등장 */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="text-4xl sm:text-5xl md:text-7xl font-medium leading-[1.15] tracking-tight text-gray-900 font-serif"
+              >
                 변하지 않는 돌 위에,
                 <br />
-                <span className="text-gray-400">
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                  className="text-gray-400"
+                >
                   변하지 않을 순간을 새기다.
-                </span>
-              </h1>
+                </motion.span>
+              </motion.h1>
             </div>
 
-            <p className="text-gray-600 text-sm sm:text-lg leading-relaxed max-w-xl mx-auto font-light">
+            {/* Description - 세 번째 등장 */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              className="text-gray-600 text-sm sm:text-lg leading-relaxed max-w-xl mx-auto font-light"
+            >
               담솔은 도장을 만들지 않습니다.
               <br className="hidden sm:block" />
               천연석 위에 이름과 시간을 새기는 각품(刻品)을 만듭니다.
-            </p>
+            </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            {/* Buttons - 네 번째 등장 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+              className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
+            >
               <Button asChild size="lg" className="h-11 px-6">
                 <Link href="#collection">컬렉션 보기</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-11 px-6">
                 <Link href="#story">브랜드 스토리</Link>
               </Button>
-            </div>
+            </motion.div>
           </div>
 
           {/* Background Texture */}
@@ -59,7 +90,13 @@ export default function Home() {
           id="story"
           className="py-24 bg-white border-y border-border px-4"
         >
-          <div className="max-w-3xl mx-auto text-center space-y-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="max-w-3xl mx-auto text-center space-y-10"
+          >
             <span className="text-[#B91C1C] text-xs font-bold tracking-widest uppercase">
               Philosophy
             </span>
@@ -90,7 +127,7 @@ export default function Home() {
                 담솔의 철학 더 보기 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* ===== Stone Selection ===== */}
@@ -98,7 +135,13 @@ export default function Home() {
           id="stones"
           className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
         >
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="flex flex-col md:flex-row items-center gap-12"
+          >
             <div className="w-full md:w-1/2 space-y-6">
               <span className="text-gray-400 text-xs font-bold tracking-widest uppercase mb-2 block">
                 Material
@@ -155,7 +198,7 @@ export default function Home() {
                 Premium
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* ===== Collection ===== */}
@@ -163,7 +206,13 @@ export default function Home() {
           id="collection"
           className="py-24 bg-white border-t border-border px-4 sm:px-6"
         >
-          <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="max-w-6xl mx-auto"
+          >
             <div className="flex items-end justify-between mb-12">
               <div>
                 <span className="text-gray-400 text-xs font-bold tracking-widest uppercase mb-2 block">
@@ -187,7 +236,7 @@ export default function Home() {
             </div>
 
             <CollectionGrid limit={3} />
-          </div>
+          </motion.div>
         </section>
       </main>
       <Footer />

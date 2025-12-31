@@ -2,6 +2,7 @@
 
 import { Collection } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface CollectionCardProps {
   collection: Collection;
@@ -15,7 +16,10 @@ export function CollectionCard({
   className,
 }: CollectionCardProps) {
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={cn(
         "group block relative cursor-pointer",
         className
@@ -45,7 +49,7 @@ export function CollectionCard({
       <p className="text-xs text-gray-500 mt-2">
         {collection.description}
       </p>
-    </div>
+    </motion.div>
   );
 }
 

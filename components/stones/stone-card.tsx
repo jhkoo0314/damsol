@@ -6,6 +6,7 @@ import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface StoneCardProps {
   stone: Stone;
@@ -18,14 +19,19 @@ export function StoneCard({ stone, onClick, className }: StoneCardProps) {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <Card
-      className={cn(
-        "group relative cursor-pointer overflow-hidden transition-all hover:shadow-lg",
-        isSoldOut && "opacity-60",
-        className
-      )}
-      onClick={onClick}
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
+      <Card
+        className={cn(
+          "group relative cursor-pointer overflow-hidden transition-all hover:shadow-lg",
+          isSoldOut && "opacity-60",
+          className
+        )}
+        onClick={onClick}
+      >
       <div className="relative aspect-square overflow-hidden">
         {stone.imageUrl && !imageError ? (
           <Image
@@ -76,6 +82,7 @@ export function StoneCard({ stone, onClick, className }: StoneCardProps) {
         <p className="text-xs text-muted-foreground">No. {stone.number}</p>
       </div>
     </Card>
+    </motion.div>
   );
 }
 
