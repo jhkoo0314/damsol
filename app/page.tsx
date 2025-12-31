@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="pt-16">
+      <main>
         {/* ===== Hero Section ===== */}
-        <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden -mt-20">
+        <section className="pt-32 pb-20 flex items-center justify-center px-4 relative overflow-hidden">
           <div className="max-w-4xl w-full text-center space-y-10 z-10">
             <div className="space-y-4">
               {/* Badge - 첫 번째 등장 */}

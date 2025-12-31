@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Header } from "@/components/layout/header";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Sun } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Brand Story | DAMSOL - 담솔의 철학",
-  description:
-    "담솔의 브랜드 스토리와 철학을 소개합니다. 우리는 도장을 만들지 않습니다. 시간을 새긴 각품(刻品)을 만듭니다.",
-};
+import { motion } from "framer-motion";
 
 export default function StoryPage() {
   return (
@@ -17,23 +13,44 @@ export default function StoryPage() {
       <main>
         {/* [HERO] Title Section */}
         <section className="pt-32 pb-20 px-4 text-center max-w-4xl mx-auto">
-          <span className="inline-block px-3 py-1 border border-gray-300 rounded-full text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase bg-white/50 mb-6">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="inline-block px-3 py-1 border border-gray-300 rounded-full text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase bg-white/50 mb-6"
+          >
             Brand Philosophy
-          </span>
-          <h1 className="text-3xl md:text-5xl font-medium leading-tight mb-8 text-gray-900 font-serif">
+          </motion.span>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-3xl md:text-5xl font-medium leading-tight mb-8 text-gray-900 font-serif"
+          >
             이름의 무게를 조각합니다.
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light font-serif">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light font-serif"
+          >
             평생 불리게 될 소중한 이름이기에에,
             <br />
             당신의 시간을 담아내는{" "}
             <strong className="text-[#B91C1C] font-medium">각품(刻品)</strong>을
             만듭니다.
-          </p>
+          </motion.p>
         </section>
 
         {/* [SECTION 1] Handcraft Value (Zigzag) */}
-        <section className="py-24 bg-white border-y border-border px-4 sm:px-6">
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="py-24 bg-white border-y border-border px-4 sm:px-6"
+        >
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="order-2 md:order-1">
               <div className="aspect-[4/5] bg-gray-100 rounded-sm relative overflow-hidden">
@@ -70,10 +87,16 @@ export default function StoryPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* [SECTION 2] The Process (Dark Mode) */}
-        <section className="py-24 bg-[#1F2937] text-white px-4 sm:px-6">
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="py-24 bg-[#1F2937] text-white px-4 sm:px-6"
+        >
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <span className="text-white/40 text-xs font-bold tracking-widest uppercase mb-2 block font-sans">
@@ -175,10 +198,16 @@ export default function StoryPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* [SECTION 3] Preservation Tech */}
-        <section className="py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="py-24 px-4 sm:px-6 max-w-6xl mx-auto"
+        >
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="order-2 md:order-1">
               <div className="aspect-square bg-white border border-gray-200 p-2 shadow-xl rounded-sm">
@@ -238,10 +267,16 @@ export default function StoryPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* [SECTION 4] Promise */}
-        <section className="py-24 bg-white border-t border-border px-4 text-center">
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="py-24 bg-white border-t border-border px-4 text-center"
+        >
           <div className="max-w-2xl mx-auto space-y-10">
             <div className="w-10 h-px bg-gray-300 mx-auto"></div>
             <h2 className="text-2xl font-bold text-gray-900 font-serif">
@@ -273,7 +308,7 @@ export default function StoryPage() {
               </Button>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
     </>
   );

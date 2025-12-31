@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Container } from "@/components/layout/container";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-export const metadata: Metadata = {
-  title: "각품 소개 | 담솔 DAMSOL",
-  description: "각품(刻品)이란 무엇인가요? 새긴다(刻) + 품(品) = 의미가 새겨진 작품. 담솔이 정의한 고유 브랜드 언어를 소개합니다.",
-};
+import { motion } from "framer-motion";
 
 export default function KakPoomPage() {
   return (
@@ -17,16 +14,32 @@ export default function KakPoomPage() {
         <Container>
           {/* 히어로 섹션 */}
           <section className="py-24 md:py-32 text-center">
-            <h1 className="font-serif text-4xl md:text-6xl font-bold mb-8">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="font-serif text-4xl md:text-6xl font-bold mb-8"
+            >
               각품(刻品)
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto"
+            >
               담솔이 정의한 고유 브랜드 언어
-            </p>
+            </motion.p>
           </section>
 
           {/* 각품 개념 설명 */}
-          <section className="py-16 md:py-24">
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="py-16 md:py-24"
+          >
             <div className="max-w-4xl mx-auto space-y-12">
               <div className="text-center space-y-6">
                 <p className="font-serif text-3xl md:text-4xl font-semibold">
@@ -86,10 +99,16 @@ export default function KakPoomPage() {
                 </p>
               </div>
             </div>
-          </section>
+          </motion.section>
 
           {/* 각품의 가치 제안 */}
-          <section className="py-24 md:py-32">
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="py-24 md:py-32"
+          >
             <Container>
               <div className="text-center mb-16">
                 <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">
@@ -174,10 +193,16 @@ export default function KakPoomPage() {
                 </Card>
               </div>
             </Container>
-          </section>
+          </motion.section>
 
           {/* 마무리 섹션 */}
-          <section className="py-16 md:py-32 bg-muted/30">
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="py-16 md:py-32 bg-muted/30"
+          >
             <Container>
               <div className="max-w-3xl mx-auto text-center space-y-6">
                 <p className="font-serif text-3xl md:text-4xl font-semibold">
@@ -188,7 +213,7 @@ export default function KakPoomPage() {
                 </p>
               </div>
             </Container>
-          </section>
+          </motion.section>
         </Container>
       </main>
       <Footer />
